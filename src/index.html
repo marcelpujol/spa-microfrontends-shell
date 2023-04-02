@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Shell</title>
+        <script type="systemjs-importmap">
+            {
+                "imports": {
+                    "@tengo-ruta/meteo": "http://localhost:4000/tengo-ruta-meteo.js",
+                    "@tengo-ruta/water": "http://localhost:4001/tengo-ruta-water.js"
+                }
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
+        <script src="./single-spa.config.js"></script>
+    </head>
+    <body>
+        <p>Hola que tal!</p>
+
+        <route path="meteo">
+            <application name="meteo"></application>
+        </route>
+
+        <route path="water">
+            <application name="water"></application>
+        </route>
+    </body>
+</html>
